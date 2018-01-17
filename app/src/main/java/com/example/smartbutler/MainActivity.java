@@ -17,6 +17,7 @@ import com.example.smartbutler.fragment.UserFragment;
 import com.example.smartbutler.fragment.WechatFragment;
 import com.example.smartbutler.ui.BaseActivity;
 import com.example.smartbutler.ui.SettingActivity;
+import com.example.smartbutler.utils.L;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -130,6 +131,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             //点击悬浮按钮 跳转到 设置界面
             case R.id.fab_setting:
                 startActivity(new Intent(this, SettingActivity.class));
+                L.d("点击悬浮按钮 跳转到 设置界面");
                 break;
         }
     }
