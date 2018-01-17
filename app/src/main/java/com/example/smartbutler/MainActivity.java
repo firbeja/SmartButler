@@ -127,11 +127,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-
+            //点击悬浮按钮 跳转到 设置界面
             case R.id.fab_setting:
                 startActivity(new Intent(this, SettingActivity.class));
                 break;
-
         }
     }
 }
