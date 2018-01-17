@@ -23,8 +23,10 @@ public class SplashActivity extends AppCompatActivity {
                 case StaticClass.HANDLER_SPLASH:
                     if (isFirst()) {
                         startActivity(new Intent(SplashActivity.this, GuideActivity.class));
+                        finish();
                     }else {
-                        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                        startActivity(new Intent(SplashActivity.this, GuideActivity.class));
+                        finish();
                     }
                     break;
             }
@@ -51,7 +53,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        handler.sendEmptyMessageDelayed(StaticClass.HANDLER_SPLASH, 5000);
+        handler.sendEmptyMessageDelayed(StaticClass.HANDLER_SPLASH, 500);
 
         TextView tvSplash = (TextView) findViewById(R.id.tv_splash);
         TextView tvSplashNext = (TextView) findViewById(R.id.tv_splash_next);

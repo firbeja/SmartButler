@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SmartButler</string>
     <string name="text_setting">设置</string>
+    <string name="enter_home">进入主页</string>
 </resources>
