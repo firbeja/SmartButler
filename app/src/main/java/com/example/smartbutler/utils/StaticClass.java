@@ -9,4 +9,11 @@ package com.example.smartbutler.utils;
  */
 
 public class StaticClass {
+
+    //闪屏页 的 handler.what 的 key，延时启动
+    public static final int HANDLER_SPLASH = 1001;
+
+    //判断是否 第一次启动，存入SharePreference的key
+    public static final String SHARE_IS_FIRST = "isFirst";
+
 }
