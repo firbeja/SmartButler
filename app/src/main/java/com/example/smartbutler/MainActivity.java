@@ -18,6 +18,7 @@ import com.example.smartbutler.fragment.WechatFragment;
 import com.example.smartbutler.ui.BaseActivity;
 import com.example.smartbutler.ui.SettingActivity;
 import com.example.smartbutler.utils.L;
+import com.example.smartbutler.utils.ShareUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +48,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         //初始化各个View ，给TabLayout 设置 Adapter
         initView();
+
+        ShareUtils.putString(this, "username", "时代");
+        String string = ShareUtils.getString(this, "usernamem", "默认值");
+        L.d(string + "...........................");
 
     }
 

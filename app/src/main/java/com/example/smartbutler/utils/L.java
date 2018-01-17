@@ -12,7 +12,7 @@ import android.util.Log;
 
 public class L {
 
-    public static final boolean Debug = false;
+    public static final boolean Debug = true;
 
     public static final String TAG = "SmartButler";
 
