@@ -16,4 +16,7 @@ public class StaticClass {
     //判断是否 第一次启动，存入SharePreference的key
     public static final String SHARE_IS_FIRST = "isFirst";
 
+    //Bugly_key
+    public static final String BUGLY_APP_ID = "a1d0ef57f9";
+
 }
