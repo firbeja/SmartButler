@@ -51,4 +51,9 @@ public class ShareUtils {
         return sp.getBoolean(key, defValue);
     }
 
+    public static void delete(Context mContext, String key){
+        SharedPreferences sp = mContext.getSharedPreferences(NAME, Context.MODE_PRIVATE);
+        sp.edit().remove(key);
+    }
+
 }
