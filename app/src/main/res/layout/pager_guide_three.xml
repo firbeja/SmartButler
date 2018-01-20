@@ -23,7 +23,7 @@
         android:layout_width="150dp"
         android:layout_marginTop="100dp"
         android:layout_height="wrap_content"
-        android:text="@string/enter_home"
+        android:text="进入主页"
         android:textSize="20sp"
         android:textColor="#DDA0DD"
         />

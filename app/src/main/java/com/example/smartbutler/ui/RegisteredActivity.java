@@ -78,13 +78,13 @@ public class RegisteredActivity extends AppCompatActivity implements View.OnClic
                 String desc = etDesc.getText().toString().trim();
                 String pass = etPass.getText().toString().trim();
                 String password = etPassword.getText().toString().trim();
-//                String email = etEmail.getText().toString().trim();
+                String email = etEmail.getText().toString().trim();
 
                 //判断输入框是否为空  !TextUtils.isEmpty(email)
                 if (!TextUtils.isEmpty(name) & !TextUtils.isEmpty(age) &
                         !TextUtils.isEmpty(pass) &
-                        !TextUtils.isEmpty(password)
-                        ) {
+                        !TextUtils.isEmpty(password) &
+                        !TextUtils.isEmpty(email)) {
 
 
                     //判断两次输入的密码是否一致
@@ -111,7 +111,7 @@ public class RegisteredActivity extends AppCompatActivity implements View.OnClic
                         user.setUsername(name);
                         user.setPassword(password);
                         user.setAge(Integer.parseInt(age));
-//                        user.setEmail(email);
+                        user.setEmail(email);
                         user.setDesc(desc);
                         user.setSex(isGender);
 
