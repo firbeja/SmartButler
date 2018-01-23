@@ -22,4 +22,8 @@ public class StaticClass {
     //Bmob key
     public static final String BMOB_APP_ID = "04d9a8c7690dd274b53a445258f8bfe0";
 
+    //juhe key http://v.juhe.cn/exp/index?key=6286d90b8f8a1d604e871b67d02f288a&com=yd&no=3831691405932
+    //AppKey：6286d90b8f8a1d604e871b67d02f288a
+    public static final String COURIER_KEY = "6286d90b8f8a1d604e871b67d02f288a";
+
 }

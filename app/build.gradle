@@ -39,7 +39,13 @@ dependencies {
     compile 'com.android.support:design:26.+'
     compile 'com.tencent.bugly:crashreport:latest.release'
     compile 'com.tencent.bugly:nativecrashreport:latest.release'
-    compile 'cn.bmob.android:bmob-sdk:3.5.5'
+    compile ('cn.bmob.android:bmob-sdk:3.5.5'){
+        exclude group: 'io.reactivex'
+    }
     compile 'cn.bmob.android:http-legacy:1.0'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
     testCompile 'junit:junit:4.12'
+    compile ('com.kymjs.rxvolley:rxvolley:1.1.4'){
+        exclude group: 'io.reactivex'
+    }
 }
