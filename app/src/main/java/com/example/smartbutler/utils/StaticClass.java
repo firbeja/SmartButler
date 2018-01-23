@@ -31,4 +31,17 @@ public class StaticClass {
     //http://apis.juhe.cn/mobile/get?phone=13429667914&key=您申请的KEY
     public static final String PHONE_KEY = "2e57c70b54c4e0cec96e0fd529b18862";
 
+    //问答机器人key
+    //http://op.juhe.cn/robot/index?info=你好&key=您申请到的APPKEY
+//    {
+//        "reason":"成功的返回",
+//            "result": /*根据code值的不同，返回的字段有所不同*/
+//        {
+//            "code":100000, /*返回的数据类型，请根据code的值去数据类型API查询*/
+//                "text":"你好啊，希望你今天过的快乐"
+//        },
+//        "error_code":0
+//    }
+    public static final String CHAT_LIST_KEY = "7a48539921338ef90866922b21e25f6d";
+
 }
