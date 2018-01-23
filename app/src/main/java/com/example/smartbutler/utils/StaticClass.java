@@ -24,6 +24,11 @@ public class StaticClass {
 
     //juhe key http://v.juhe.cn/exp/index?key=6286d90b8f8a1d604e871b67d02f288a&com=yd&no=3831691405932
     //AppKey：6286d90b8f8a1d604e871b67d02f288a
+    //快递key
     public static final String COURIER_KEY = "6286d90b8f8a1d604e871b67d02f288a";
+
+    //归属地key 聚合接口
+    //http://apis.juhe.cn/mobile/get?phone=13429667914&key=您申请的KEY
+    public static final String PHONE_KEY = "2e57c70b54c4e0cec96e0fd529b18862";
 
 }

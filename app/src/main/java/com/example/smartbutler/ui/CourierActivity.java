@@ -2,15 +2,18 @@ package com.example.smartbutler.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.smartbutler.R;
 import com.example.smartbutler.adapter.CourierAdapter;
 import com.example.smartbutler.entity.CourierData;
 import com.example.smartbutler.utils.L;
+import com.example.smartbutler.utils.StaticClass;
 import com.kymjs.rxvolley.RxVolley;
 import com.kymjs.rxvolley.client.HttpCallback;
 
@@ -26,6 +29,9 @@ public class CourierActivity extends AppCompatActivity implements View.OnClickLi
 
     private List<CourierData>mList;
     private ListView mListView;
+    private EditText et_name;
+    private EditText et_number;
+    private Button btn_get_courier;
 
 
     @Override
@@ -36,9 +42,9 @@ public class CourierActivity extends AppCompatActivity implements View.OnClickLi
         //juhe key http://v.juhe.cn/exp/index?key=6286d90b8f8a1d604e871b67d02f288a&com=yd&no=3831691405932
         //AppKey：6286d90b8f8a1d604e871b67d02f288a
 
-        EditText et_name = (EditText) findViewById(R.id.et_name);
-        EditText et_number = (EditText) findViewById(R.id.et_number);
-        Button btn_get_courier = (Button) findViewById(R.id.btn_get_courier);
+        et_name = (EditText) findViewById(R.id.et_name);
+        et_number = (EditText) findViewById(R.id.et_number);
+        btn_get_courier = (Button) findViewById(R.id.btn_get_courier);
         mList = new ArrayList<>();
         mListView = (ListView) findViewById(R.id.mListView);
 
@@ -61,15 +67,34 @@ public class CourierActivity extends AppCompatActivity implements View.OnClickLi
              * 7.设置数据/显示效果
              */
             case R.id.btn_get_courier :
-                //get请求简洁版实现
-                String url = "http://v.juhe.cn/exp/index?key=6286d90b8f8a1d604e871b67d02f288a&com=yd&no=3831691405932";
-                RxVolley.get(url, new HttpCallback() {
-                    @Override
-                    public void onSuccess(String t) {
-                        L.d(t);
-                        parsingJson(t);
-                    }
-                });
+
+                //1.获取输入框的内容
+                String name = et_name.getText().toString().trim();
+                String number = et_number.getText().toString().trim();
+
+                //拼接我们的url
+                String url = "http://v.juhe.cn/exp/index?key=" + StaticClass.COURIER_KEY + "&com=" + name + "&no=" + number;
+
+                //2.判断是否为空
+                if (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(number)){
+
+                    //3.拿到数据去请求数据
+                    //get请求简洁版实现
+//                    String url = "http://v.juhe.cn/exp/index?key=6286d90b8f8a1d604e871b67d02f288a&com=yd&no=3831691405932";
+                    RxVolley.get(url, new HttpCallback() {
+                        @Override
+                        public void onSuccess(String t) {
+                            L.d(t);
+                            //4.解析Json
+                            parsingJson(t);
+                        }
+                    });
+
+                }else {
+                    Toast.makeText(CourierActivity.this, R.string.text_toast_empty, Toast.LENGTH_SHORT).show();
+                }
+
+
                 break;
         }
     }
@@ -92,6 +117,7 @@ public class CourierActivity extends AppCompatActivity implements View.OnClickLi
 //                "remark":"快件在 北京分拨中心 在分拨中心进行称重扫描",
 //                "zone":""
 //        },
+    //解析数据
     private void parsingJson(String t) {
 
         try {
@@ -107,6 +133,7 @@ public class CourierActivity extends AppCompatActivity implements View.OnClickLi
                 courierData.setZone(json.getString("zone"));
                 mList.add(courierData);
             }
+            //倒序
             Collections.reverse(mList);
             CourierAdapter adapter = new CourierAdapter(this, mList);
             mListView.setAdapter(adapter);

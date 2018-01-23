@@ -34,18 +34,18 @@ dependencies {
     //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
 
     //如果你想应用能够兼容Android6.0，请添加此依赖(org.apache.http.legacy.jar)
+    compile('cn.bmob.android:bmob-sdk:3.5.5') {
+        exclude group: 'io.reactivex'
+    }
+    compile('com.kymjs.rxvolley:rxvolley:1.1.4') {
+        exclude group: 'io.reactivex'
+    }
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:design:26.+'
     compile 'com.tencent.bugly:crashreport:latest.release'
     compile 'com.tencent.bugly:nativecrashreport:latest.release'
-    compile ('cn.bmob.android:bmob-sdk:3.5.5'){
-        exclude group: 'io.reactivex'
-    }
     compile 'cn.bmob.android:http-legacy:1.0'
     compile 'de.hdodenhof:circleimageview:2.2.0'
     testCompile 'junit:junit:4.12'
-    compile ('com.kymjs.rxvolley:rxvolley:1.1.4'){
-        exclude group: 'io.reactivex'
-    }
 }

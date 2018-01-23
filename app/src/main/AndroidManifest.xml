@@ -42,7 +42,7 @@
         <activity
             android:name=".ui.SettingActivity"
             android:label="@string/text_setting" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
 
         <!-- 引导页 -->
         <activity
@@ -57,13 +57,14 @@
         <!-- 注册 -->
         <activity
             android:name=".ui.RegisteredActivity"
-            android:label="注册"></activity>
+            android:label="注册" />
 
         <!-- 修改密码 -->
         <activity
             android:name=".ui.ForgetPasswordActivity"
-            android:label="修改密码"></activity>
-        <activity android:name=".ui.CourierActivity"></activity>
+            android:label="修改密码" />
+        <activity android:name=".ui.CourierActivity" />
+        <activity android:name=".ui.PhoneActivity"></activity>
     </application>
 
 </manifest>
