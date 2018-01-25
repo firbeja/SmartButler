@@ -44,4 +44,27 @@ public class StaticClass {
 //    }
     public static final String CHAT_LIST_KEY = "7a48539921338ef90866922b21e25f6d";
 
+    //微信精选key
+//    {
+//        "reason": "success",
+//            "result": {
+//        "list": [
+//        {
+//            "id": "wechat_20150401071581",
+//                "title": "号外：集宁到乌兰花的班车出事了！！！！！",
+//                "source": "内蒙那点事儿",
+//                "firstImg": "http://zxpic.gtimg.com/infonew/0/wechat_pics_-214279.jpg/168",
+//                "mark": "",
+//                "url": "http://v.juhe.cn/weixin/redirect?wid=wechat_20150401071581"
+//        },
+//        {
+//            "id": "wechat_20150402028462",
+//                "title": "【夜读】梁晓声：你追求的，就是你人生的意义",
+//                "source": "人民日报",
+//                "firstImg": "http://zxpic.gtimg.com/infonew/0/wechat_pics_-214521.jpg/168",
+//                "mark": "",
+//                "url": "http://v.juhe.cn/weixin/redirect?wid=wechat_20150402028462"
+//        },
+    public static final String WECHAT_KEY = "78f723dccf85aea324a3cf0daac97f35";
+
 }
