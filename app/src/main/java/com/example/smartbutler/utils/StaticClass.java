@@ -95,6 +95,9 @@ public class StaticClass {
 //                "used": true,
 //                "who": "daimajia"
 //        },
-        public static final String GIRL_URL = "http://gank.io/api/data/%E7%A6%8F%E5%88%A9/50/1";
+    public static final String GIRL_URL = "http://gank.io/api/data/%E7%A6%8F%E5%88%A9/50/1";
+
+    //语音key
+    public static final String VOICE_KEY = "5a6ae5a7";
 
 }
