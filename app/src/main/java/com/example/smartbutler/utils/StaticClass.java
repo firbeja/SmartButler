@@ -8,6 +8,8 @@ package com.example.smartbutler.utils;
  * 描述：   数据、常量
  */
 
+import java.net.URLEncoder;
+
 public class StaticClass {
 
     //闪屏页 的 handler.what 的 key，延时启动
@@ -66,5 +68,33 @@ public class StaticClass {
 //                "url": "http://v.juhe.cn/weixin/redirect?wid=wechat_20150402028462"
 //        },
     public static final String WECHAT_KEY = "78f723dccf85aea324a3cf0daac97f35";
+
+    //妹子 api接口
+//    {
+//        "error": false,
+//            "results": [
+//        {
+//            "_id": "5a65381a421aa91156960022",
+//                "createdAt": "2018-01-22T09:02:18.715Z",
+//                "desc": "1-22",
+//                "publishedAt": "2018-01-23T08:46:45.132Z",
+//                "source": "chrome",
+//                "type": "\u798f\u5229",
+//                "url": "http://7xi8d6.com1.z0.glb.clouddn.com/20180122090204_A4hNiG_Screenshot.jpeg",
+//                "used": true,
+//                "who": "daimajia"
+//        },
+//        {
+//            "_id": "5a5bfc29421aa9115489927b",
+//                "createdAt": "2018-01-15T08:56:09.429Z",
+//                "desc": "1-15",
+//                "publishedAt": "2018-01-16T08:40:08.101Z",
+//                "source": "chrome",
+//                "type": "\u798f\u5229",
+//                "url": "http://7xi8d6.com1.z0.glb.clouddn.com/20180115085556_8AeReR_taeyeon_ss_15_1_2018_7_58_51_833.jpeg",
+//                "used": true,
+//                "who": "daimajia"
+//        },
+        public static final String GIRL_URL = "http://gank.io/api/data/%E7%A6%8F%E5%88%A9/50/1";
 
 }

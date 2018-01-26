@@ -103,6 +103,7 @@ public class WechatFragment extends Fragment {
                 wechatData.setTitle(title);
                 wechatData.setSource(source);
                 wechatData.setFirstImg(firstImg);
+//                L.d(firstImg + "-------------------------firstImage");
                 wechatData.setUrl(url);
                 mList.add(wechatData);
 
