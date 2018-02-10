@@ -83,6 +83,114 @@
 
     </LinearLayout>
 
-    <!--版本更新-->
+    <!--检测版本-->
+    <LinearLayout
+        android:id="@+id/ll_update"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="检测版本"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:paddingLeft="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="检查是否有新版本提示下载"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="5dp"
+            />
+
+    </LinearLayout>
+
+    <!--扫一扫-->
+    <LinearLayout
+        android:id="@+id/ll_scan"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="扫一扫"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:paddingLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_scan_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="扫描二维码或者条形码"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="5dp"
+            />
+
+    </LinearLayout>
+
+    <!--生成二维码-->
+    <LinearLayout
+        android:id="@+id/ll_qr_code"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="二维码分享"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:paddingLeft="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="把自己分享给好友吧"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="5dp"
+            />
+
+    </LinearLayout>
+
+    <!--我的位置-->
+    <LinearLayout
+        android:id="@+id/ll_my_location"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我的位置"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:paddingLeft="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="时刻掌握自身位置"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="5dp"
+            />
+
+    </LinearLayout>
 
 </LinearLayout>

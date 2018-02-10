@@ -103,4 +103,7 @@ public class StaticClass {
     //短信Action
     public static final String SMS_ACTION = "android.provider.Telephony.SMS_RECEIVED";
 
+    //版本更新 url
+    public static final String CHECK_UPDATE_URL = "http://172.20.10.9/config.json";
+
 }
